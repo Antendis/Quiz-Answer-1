@@ -1,0 +1,12 @@
+import requests
+from bs4 import BeautifulSoup
+
+#doc_url = input("URL: ")
+
+google_doc = requests.get("https://docs.google.com/document/d/e/2PACX-1vRMx5YQlZNa3ra8dYYxmv-QIQ3YJe8tbI3kqcuC7lQiZm-CSEznKfN_HYNSpoXcZIV3Y_O3YoUB1ecq/pub")
+scraped_doc = BeautifulSoup(google_doc.text, "html.parser")
+
+table = scraped_doc.find_all("table")
+str_table = str(table)
+
+print(table)
