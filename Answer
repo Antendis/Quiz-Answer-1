@@ -16,3 +16,7 @@ data = re.findall(r'>(.*?)<', str_table)
 print(data)
 
 filtered = [match for match in data if match.strip() != '']
+filtered.remove('x-coordinate')
+filtered.remove('Character')
+filtered.remove('y-coordinate')
+print(filtered)
