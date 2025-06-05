@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import re
 
 #doc_url = input("URL: ")
 
@@ -10,3 +11,6 @@ table = scraped_doc.find_all("table")
 str_table = str(table)
 
 print(table)
+
+data = re.findall(r'>(.*?)<', str_table)
+print(data)
