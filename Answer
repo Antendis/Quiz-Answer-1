@@ -20,3 +20,6 @@ filtered.remove('x-coordinate')
 filtered.remove('Character')
 filtered.remove('y-coordinate')
 print(filtered)
+
+parsed_rows = [filtered[i:i+3] for i in range(0, len(filtered), 3)]
+print(parsed_rows)
