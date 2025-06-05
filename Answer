@@ -14,3 +14,5 @@ print(table)
 
 data = re.findall(r'>(.*?)<', str_table)
 print(data)
+
+filtered = [match for match in data if match.strip() != '']
